@@ -1,0 +1,140 @@
+/*
+estrutura
+
+seletor{
+    propriedade: valor;
+    color: red;
+}
+*/
+
+body{
+    background-color: rgb(21, 32, 43);   
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* cabeçalho */
+
+.cabecalho{
+    flex-basis: 30%;
+    position: fixed;
+    margin-top: 20px;
+}
+
+.cabecalho__logo{
+    margin-bottom: 22px;
+}
+
+.cabecalho__logo figcaption{
+    display: none;
+}
+
+.cabecalho__menuNavegação{}
+
+.cabecalho__menuLista{}
+
+.cabecalho__menuItem{
+    margin-bottom: 25px;
+}
+
+.cabecalho__menuItemTweetarButton{
+    background-color: rgb(29,155,240);
+    border: none;
+    padding: 16px 60px;
+    margin: 4px;
+    color: white;
+    border-radius: 25px;
+}
+
+.cabecalho__menuItem a{
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    vertical-align: top;
+    margin-left: 15px;
+}
+
+/* conteudo principal */
+
+.conteudoPrincipal{
+    flex-basis: 70%;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    margin-left: 200px;
+}
+
+.conteudoPrincipal__titulo{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.conteudoPrincipal__formulario{}
+
+.conteudoPrincipal__formulario button{
+    background-color: rgb(29,155,240);
+    border: none;
+    padding: 8px 20px;
+    margin: 4px;
+    color: white;
+    border-radius: 15px;
+    margin-left: 735px;
+    margin-top: 10px;
+}
+
+.conteudoPrincipal__formulario textarea{
+    width: auto;
+    background-color: rgb(21, 32, 43);
+    display: block;
+    width: 99%;
+    height: 70px;
+    outline: none;
+    resize: none;
+    color: white;
+}
+
+.conteudoPrincipal__feed{
+    padding: 10px 20px;
+}
+
+.conteudoPrincipal__listaTweets{
+    display: flex;
+    flex-flow: column-reverse nowrap;
+}
+
+.conteudoPrincipal__tweet{
+    padding: 15px 0px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    align-items: flex-start;
+    
+}
+
+.conteudoPrincipal__tweet img{
+    margin-right: 12px;
+}
+
+/* conteudo tweet */
+
+.tweet__conteudo{}
+
+.tweet__conteudo h2{
+    color: white;
+    display: inline-block; 
+}
+
+.tweet__conteudo span{
+    color: rgb(136, 153, 166);
+}
+
+.tweet__conteudo p{
+    color: white;
+    margin-top: 10px;
+}

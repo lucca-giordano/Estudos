@@ -1,0 +1,18 @@
+pandas - base de dados
+
+pyautogui
+pyperclip
+
+
+pandas.read ->> le arquivo
+
+pandas.drop ->> exclui uma linha ou coluna
+    "nome", axis= 0-linha
+            axis= 1-coluna
+
+pandas.to_numeric ->> transforma coluna em numerico
+    "coluna", errors= "coerce"-transforma um erro em vazio
+
+.dropna() ->> exclui uma linha ou coluna vazia
+    how='all'-totalmente vazias,   axis= 0-linha
+    how='any'-pelo menos um vazio, axis= 1-coluna

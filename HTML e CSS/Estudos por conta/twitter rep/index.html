@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head> <!--configs-->
+        <meta charset="UTF-8">
+        <title>Twitter réplica</title>
+        <link rel="icon" href="https://imagensemoldes.com.br/wp-content/uploads/2020/05/Lindo-Passarinho-PNG.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/reset.css">
+    </head>
+    <body> <!--visual-->
+
+            <div class="container">
+
+                <header class="cabecalho"> <!--cabeçalho-->
+                    <figure class="cabecalho__logo">
+                        <img src="./assets/img/bird 1.svg" alt="logo">
+                        <figcaption hidden>logo</figcaption>
+                    </figure>
+                    <nav class="cabecalho__menuNavegação">
+                        <ul class="cabecalho__menuLista">
+
+                            <li class="cabecalho__menuItem">
+                                <img src="./assets/img/Home.png" alt="Pagina inicial">
+                                <a href="">Pagina inicial</a>
+                            </li>
+
+                            <li class="cabecalho__menuItem">
+                                <img src="./assets/img/Hashtag.png" alt="Explorar">
+                                <a href="">Explorar</a>
+                            </li>
+
+                            <li class="cabecalho__menuItem">
+                                <img src="./assets/img/Notification.png" alt="Notificações">
+                                <a href="">Notificações</a>
+                            </li>
+
+                            <li class="cabecalho__menuItem">
+                                <img src="./assets/img/Group.png" alt="Mensagens">
+                                <a href="">Mensagens</a>
+                            </li>
+
+                            <li class="cabecalho__menuItem">
+                                <img src="./assets/img/Group (1).png" alt="tens salvos">
+                                <a href="">Itens salvos</a>
+                            </li>
+
+                            <li class="cabecalho__menuItem">
+                                <img src="./assets/img/Group (2).png" alt="Listas">
+                                <a href="">Listas</a>
+                            </li>
+
+                            <li class="cabecalho__menuItem">
+                                <img src="./assets/img/ProfilePic.png" alt="Perfil">
+                                <a href="">Perfil</a>
+                            </li>
+
+                            <li class="cabecalho__menuItem">
+                                <img src="./assets/img/Group (3).png" alt="Mais">
+                                <a href="">Mais</a>
+                            </li>
+
+                            <li class="cabecalho__menuItem">
+                                <form action="#" class="cabecalho__menuItemTweetar">
+                                    <button type="submit" class="cabecalho__menuItemTweetarButton">Tweetar</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <main class="conteudoPrincipal"> <!--Conteudo principal-->
+                    
+                    <h2 class="conteudoPrincipal__titulo">Pagina inicial</h2>
+                    <form action="#" class="conteudoPrincipal__formulario">
+                        <textarea name="TextoTweet" placeholder="O que está acontecendo?"></textarea>
+                        <button type="submit" class="conteudoPrincipal__formularioButton" onclick="setColor('button', '#101010')">Tweetar</button>
+                    </form>
+                    
+                    <section class="conteudoPrincipal__feed">
+                        <ul class="conteudoPrincipal__listaTweets">
+                        </ul>
+                    </section>
+                </main>
+            </div>
+        <script src="./assets/js/script.js" type="text/javascript" ></script>
+    </body>
+</html>
