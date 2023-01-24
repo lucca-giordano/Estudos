@@ -1,0 +1,1 @@
+# deu n mt complicado essa porra puta que pariu
