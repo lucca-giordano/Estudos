@@ -19,7 +19,7 @@ int main(void){
 
 **Não se atente muito a o que `int main(void)` significa**, nós iremos ver isso mais pra frente
 
-Nós podemos importar alguns `header files`, assim adcionando funções novas a linguagem, como a **`stardart io`**, que acaba sendo essencial em muitos casos
+Nós podemos importar alguns `header files`, assim adcionando funções novas a linguagem, como a **`standart io`**, que acaba sendo essencial em muitos casos
 
 ```cpp
 #include <stdio.h>

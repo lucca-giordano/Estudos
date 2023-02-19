@@ -14,11 +14,10 @@ int main(void){
     printf("Segundo numero: ");
     scanf("%lf", &num2);
     printf("%lf %c %lf = %lf", num1, op, num2, cauculator(num1, op, num2));
-    printf(cauculator(num1, op, num2));
 
 }
 
-double cauculator(double a, int b, double c){
+double cauculator(double a, char b, double c){
     double res;
     if (b == '+'){
         res = a + c;
