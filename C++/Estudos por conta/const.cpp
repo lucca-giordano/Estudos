@@ -1,5 +1,7 @@
 #include <iostream>
 
+/* Constantes são estruturas de dados que não tem seu valor alterado dentro do seu código após sua declaração */
+
 int main(){
     const double PI =3.14159;
     double radius = 10;

@@ -1,6 +1,10 @@
 #include <iostream>
 #include <cmath>
 
+/*
+Aqui é possível ver uma junção dos conceitos de operadores e funções matemáticas.
+*/
+
 int main(){
     double a, b, c;
     std::cout << "Digite o valor de a: ";

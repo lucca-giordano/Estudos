@@ -1,5 +1,18 @@
 #include <iostream>
 
+/* No C++, os operadores matemáticos são:
+
++ para soma
+- para subtração
+* para multiplicação
+/ para divisão
+% para resto da divisão
+
+Dessa forma pode-se elaborar qualquer função matemática com base nos conceitos mais básicos, 
+sem contar com as funções ja existentes em cmath.h, que facilitam a crianção desse tipo de coisa.
+
+ */
+
 int main(){
 
     int students = 20;
