@@ -1,6 +1,6 @@
 #include <iostream>
 
-int mian(){
+int main(){
     double num1, num2, result;
     char op;
 
