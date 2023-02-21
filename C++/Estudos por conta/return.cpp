@@ -1,5 +1,8 @@
 #include <iostream>
 
+/* O operador return, devolve o valor gerado por uma função, assim, atribuindo o mesmo a uma váriável ou a uma outra função.
+*/
+
 double vol(double altura, double largura, double comprimento);
 
 int main(){
