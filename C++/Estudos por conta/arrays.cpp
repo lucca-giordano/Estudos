@@ -12,7 +12,7 @@ int main(){
     std::cout << carros[1] << std::endl; // irá imprimir o valor da array na posição 1, que no caso é Volvo.
     std::cout << carros[2] << std::endl; // irá imprimir o valor da array na posição 2, que no caso é Ford.
 
-    std::string carro_modelos [][] = {{"BMW", "Volvo", "Ford"}, {"X5", "XC90", "Fiesta"}}; // array bidimensional
+    std::string carro_modelos [] = {{"BMW", "Volvo", "Ford"}, {"X5", "XC90", "Fiesta"}}; // array bidimensional
     std::cout << carro_modelos[0][0] << std::endl; // irá imprimir o valor da array na posição 0, que no caso é BMW.
     std::cout << carro_modelos[0][1] << std::endl; // irá imprimir o valor da array na posição 1, que no caso é Volvo.
     std::cout << carro_modelos[0][2] << std::endl; // irá imprimir o valor da array na posição 2, que no caso é Ford.
