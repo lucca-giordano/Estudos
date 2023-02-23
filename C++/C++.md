@@ -177,3 +177,45 @@ const int x = 5; // x é uma constante inteira com o valor 5
 const char y = 'a'; // y é uma constante caractere com o valor 'a'
 
 ```
+
+# Namespace
+
+Os namespaces são usados para organizar o código em grupos lógicos e para evitar conflitos de nomes que possam ocorrer. Os namespaces podem ser definidos com a palavra-chave `namespace`.
+
+```cpp
+
+namespace primeiro_namespace{
+    int x = 5;
+}
+
+namespace segundo_namespace{
+    int x = 10;
+}
+
+int main(){
+    std::cout << primeiro_namespace::x << std::endl; // 5
+    std::cout << segundo_namespace::x << std::endl; // 10
+    return 0;
+}
+
+```
+
+# Type Alias
+
+O type alias é usado para dar um nome alternativo a um tipo de dados existente. O type alias é definido com a palavra-chave `using` ou com a palavra-chave `typedef`.
+
+```cpp
+
+using inteiro_t = int;
+typedef std::string str_t;
+
+int main(){
+    inteiro x = 5;
+    std::cout << x << std::endl; // 5
+    return 0;
+}
+
+```
+
+**Pode-se notar o uso do '`_t`' no final do type alias definido. Por convenção, quando um alias para um tipo de dado é definido, usa-se '`_t`' ao final, para demonstrar sua origem.**
+
