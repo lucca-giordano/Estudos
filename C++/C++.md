@@ -685,20 +685,21 @@ std::cout << sizeof(array) / sizeof(int) << std::endl;
 
 ## Passando uma array para uma função
 
-Uma array pode ser passada para uma função como parâmetro.
+Uma array pode ser passada para uma função como parâmetro, e a função pode acessar os elementos da array. Porém, vale notar que, ao ser passada para uma função, uma array não é copiada, e sim, é passada por referência, e o seu tamanho também não é passado. Ou seja, para acessar os elementos de uma array passada para uma função, é necessário passar o tamanho da array como parâmetro.
 
 ```cpp
 
-int main(){
-    int array[] = {1, 2, 3, 4, 5};
-    printArray(array);
-    return 0;
+void printArray(int array[], int size){
+    for(int i = 0; i < size; i++){
+        std::cout << array[i] << std::endl;
+    }
 }
 
-void printArray(int array[]){
-    for(int x : array){
-        std::cout << x << std::endl;
-    }
+int main(){
+    int array[] = {1, 2, 3, 4, 5};
+    tamanho = sizeof(array) / sizeof(int);
+    printArray(array, tamanho);
+    return 0;
 }
 
 ```
