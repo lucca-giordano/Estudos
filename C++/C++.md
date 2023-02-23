@@ -619,6 +619,23 @@ int main(){
 
 ```
 
+### Parâmetros constantes
+
+Um parâmetro pode ser definido como constante, para que ele não possa ser alterado dentro da função.
+
+```cpp
+
+void printNumber(const int x){
+    std::cout << x << std::endl;
+}
+
+int main(){
+    printNumber(5);
+    return 0;
+}
+
+```
+
 ## Retornando um valor
 
 Uma função pode retornar um valor. Um valor é retornado com a palavra-chave `return`.
@@ -823,3 +840,4 @@ B: 5
 ```
 
 Assim, concluindo o programa com sucesso, da maneira esperada.
+
