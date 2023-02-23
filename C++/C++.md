@@ -730,7 +730,7 @@ std::cout << carros[2][2] << std::endl;
 
 # Endereços de memória
 
-Endereços de memória são usados para armazenar a localização de um valor na memória. Um endereço de memória é definido com a palavra-chave `&` e o nome da variável.
+Endereços de memória são usados para armazenar a localização de um valor na memória. Um endereço de memória pode ser acessado com o operador `&`.
 
 ```cpp
 
@@ -738,3 +738,16 @@ std::string nome = "João";
 int idade = 20;
 bool vivo = true;
 
+std::cout << &nome << std::endl;
+std::cout << &idade << std::endl;
+std::cout << &vivo << std::endl;
+
+```
+
+Esse código irá retornar algo como:
+
+- 0x7ffeeb2b9a10
+- 0x7ffeeb2b9a20
+- 0x7ffeeb2b9a24
+
+Essa sequencia de números e letras parece aleatória, mas na verdade, é um endereço de memória. O endereço de memória é um número hexadecimal, e demonstra a localização de um valor na memória. O endereço de memória é diferente para cada valor, e é diferente a cada execução do programa.
