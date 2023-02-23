@@ -9,53 +9,16 @@ Aqui estão todas as minhas anotações sobre C++, desde o mais básico até o m
 ## Índice
 
 - [Iniciando um projeto](#iniciando-um-projeto)
-    - [Sintaxe](#sintaxe)
-        - [#include](#include)
-        - [int main()](#int-main)
-        - [return 0;](#return-0)
-    - [Hello World](#hello-world)
-        - [std::cout](#stdcout)
-        - [<< "Hello World!"](#-hello-world)
-        - [std::endl](#stdendl)
 - [Variáveis](#variáveis-e-tipos-de-dados)
-    - [Tipos de Dados](#tipos-de-dados)
-        - [Inteiros](#inteiros)
-        - [Caracteres](#caracteres)
-        - [Strings](#strings)
-        - [Ponto Flutuante](#ponto-flutuante)
-        - [Booleano](#booleano)
-        - [Valor Nulo](#valor-nulo)
-    - [Variáveis](#variáveis)
 - [Constantes](#constantes)
 - [Namespaces](#namespace)
 - [Type alias](#type-alias)
 - [Operadores Aritméticos](#operadores-aritméticos)
-    - [Adição](#adição)
-    - [Subtração](#subtração)
-    - [Multiplicação](#multiplicação)
-    - [Divisão](#divisão)
-    - [Módulo](#módulo)
-    - [Incremento](#incremento)
 - [Input de Dados](#input-de-dados)
 - [Operadores condicionais](#operadores-condicionais)
-    - [if, else if, else](#if-else-if-else)
-    - [switch](#switch)
-    - [Operador ternário](#operador-ternário)
-    - [Operadores de Comparação](#operadores-de-comparação)
-    - [Operadores Lógicos](#operadores-lógicos)
 - [Loops](#loops)
-    - [while](#while)
-    - [do while](#do-while)
-    - [for](#for)
-    - [break](#break)
-    - [continue](#continue)
-    - [Nested loops](#nested-loops)
-    - [goto](#goto)
-- [Funções](funções)
-    - [Definindo uma função](#definindo-uma-função)
-    - [Chamando uma função](#chamando-uma-função)
-    - [Parâmetros](#parâmetros)
-    - [Retornando um valor](#retornando-um-valor)
+- [Funções](#funções)
+- [Arrays](#arrays)
 
 
 # Iniciando um projeto
@@ -603,7 +566,24 @@ void printHelloWorld(){
 
 ```
 
-É importante lembrar que, seu código é lido de cima para baixo, e c++ executa tudo que está dentro da função main. Ou seja, normalmente, as funções são definidas abaixo da função main, e logo acima da mesma é 
+É importante lembrar que, seu código é lido de cima para baixo, e c++ executa tudo que está dentro da função main. Ou seja, normalmente, as funções são definidas abaixo da função main, e logo acima da mesma é declarada, dessa forma:
+
+```cpp
+
+include <iostream>
+
+void printHelloWorld();
+
+int main(){
+    printHelloWorld();
+    return 0;
+}
+
+void printHelloWorld(){
+    std::cout << "Hello World" << std::endl;
+}
+
+```
 
 ## Chamando uma função
 
@@ -703,4 +683,37 @@ std::cout << sizeof(array) / sizeof(int) << std::endl;
 
 ```
 
+## Iterando por uma array
 
+É possível iterar de duas formas por uma array, a primeira, é usando um loop tradicional, a segunda, é usando um loop especializado para arrays, o _for each_, que apesar de mais simples, é mais limitado. Pela praticidade, iremos ver apenas o `for each`
+
+```cpp
+
+std::string alunos[] = {"João", "Maria", "José"};
+for(std::string aluno : alunos){
+    std::cout << aluno << std::endl;
+}
+
+```
+
+Dessa forma, a variável `aluno` irá receber o valor de cada elemento da array `alunos`, e o bloco de código será executado para cada elemento.
+
+## Passando uma array para uma função
+
+Uma array pode ser passada para uma função como parâmetro.
+
+```cpp
+
+int main(){
+    int array[] = {1, 2, 3, 4, 5};
+    printArray(array);
+    return 0;
+}
+
+void printArray(int array[]){
+    for(int x : array){
+        std::cout << x << std::endl;
+    }
+}
+
+```
