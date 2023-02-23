@@ -841,3 +841,33 @@ B: 5
 
 Assim, concluindo o programa com sucesso, da maneira esperada.
 
+# Ponteiros
+
+Ponteiros são variáveis que armazenam o endereço de memória de outra variável. Ponteiros são definidos com o operador `*`.
+
+```cpp
+
+std::string nome = "João";
+std:string *pNome = &nome;
+
+std::cout << nome << std::endl;
+std::cout << &nome << std::endl;
+std::cout << pNome << std::endl;
+std::cout << *pNome << std::endl;
+
+```
+
+O código acima irá imprimir:
+
+```
+
+João
+0x7ffeeb2b9a10
+0x7ffeeb2b9a10
+João
+
+```
+
+Ou seja, o valor de `pNome` é o mesmo que o endereço de memória de `nome`. O operador `*` também pode ser usado para acessar o valor contido no endereço de memória guardado em um ponteiro.
+
+**Lembrando que essa sequência de letras e números irá variar, este é só um exemplo**
