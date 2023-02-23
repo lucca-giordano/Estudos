@@ -751,3 +751,75 @@ Esse código irá retornar algo como:
 - 0x7ffeeb2b9a24
 
 Essa sequencia de números e letras parece aleatória, mas na verdade, é um endereço de memória. O endereço de memória é um número hexadecimal, e demonstra a localização de um valor na memória. O endereço de memória é diferente para cada valor, e é diferente a cada execução do programa.
+
+## Passar por valor
+
+Ao passar uma variável para uma função, o valor da variável é copiado para a função. Ou seja, a função recebe uma cópia do valor da variável, e não o valor da variável em si.
+
+Ou seja, ao editar o valor da váviável dentro da função, o valor da variável fora da função não é alterado.
+
+Vamos usar de exemplo um programa que troca o valor de duas variáveis.
+
+```cpp
+
+void swap(int x, int y){
+    int temp = x;
+    x = y;
+    y = temp;
+}
+
+int main(){
+    int a = 5;
+    int b = 10;
+    swap(a, b);
+    std::cout << "A: " << a << std::endl;
+    std::cout << "B: " <<  b << std::endl;
+    return 0;
+}
+
+```
+
+O código acima irá imprimir:
+
+```
+A: 5
+B: 10
+```
+
+Isso acontece porque, ao passar as variáveis `a` e `b` para a função `swap`, elas são copiadas para a função, e não o valor delas. Ou seja, a função `swap` recebe uma cópia do valor de `a` e `b`, e não o valor de `a` e `b` em si. Por isso, ao editar o valor de `a` e `b` dentro da função `swap`, o valor de `a` e `b` fora da função não é alterado.
+
+## Passar por referência
+
+Ao contrário de passar por valor, ao passar uma variável para uma função por referência, o valor da variável não é copiado para a função, e sim, o endereço de memória da variável é copiado para a função. Ou seja, a função recebe o endereço de memória da variável, e não o valor da variável. 
+
+Dessa forma, ao editar o valor da variável dentro da função, o valor da variável fora da função também é alterado, isso ocorre por o valor da variável é alterado na memória, e não em uma cópia do valor da variável.
+
+Vamos usar de exemplo o mesmo programa que troca o valor de duas variáveis, porém, dessa vez, vamos passar as variáveis por referência.
+
+```cpp
+
+void swap(int &x, int &y){
+    int temp = x;
+    x = y;
+    y = temp;
+}
+
+int main(){
+    int a = 5;
+    int b = 10;
+    swap(a, b);
+    std::cout << "A: " << a << std::endl;
+    std::cout << "B: " <<  b << std::endl;
+    return 0;
+}
+
+```
+
+O código acima irá imprimir:
+
+```
+A: 10
+B: 5
+```
+
+Assim, concluindo o programa com sucesso, da maneira esperada.
