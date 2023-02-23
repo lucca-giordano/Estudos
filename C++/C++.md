@@ -51,6 +51,11 @@ Aqui estão todas as minhas anotações sobre C++, desde o mais básico até o m
     - [continue](#continue)
     - [Nested loops](#nested-loops)
     - [goto](#goto)
+- [Funções](funções)
+    - [Definindo uma função](#definindo-uma-função)
+    - [Chamando uma função](#chamando-uma-função)
+    - [Parâmetros](#parâmetros)
+    - [Retornando um valor](#retornando-um-valor)
 
 
 # Iniciando um projeto
@@ -650,3 +655,4 @@ int main(){
 }
 
 ```
+
