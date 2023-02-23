@@ -7,19 +7,18 @@ tipo nome[] = {valor1, valor2, valor3, ...};
 
 int main(){
 
-    std::string carros[] = {"BMW", "Volvo", "Ford"};
-    std::cout << carros[0] << std::endl; // irá imprimir o valor da array na posição 0, que no caso é BMW.
-    std::cout << carros[1] << std::endl; // irá imprimir o valor da array na posição 1, que no caso é Volvo.
-    std::cout << carros[2] << std::endl; // irá imprimir o valor da array na posição 2, que no caso é Ford.
+    std::string carros[] = {"BMW", "Ferrari", "Lamborghini", "Porsche"};
+    std::string modelos[4];
 
-    std::string carro_modelos [] = {{"BMW", "Volvo", "Ford"}, {"X5", "XC90", "Fiesta"}}; // array bidimensional
-    std::cout << carro_modelos[0][0] << std::endl; // irá imprimir o valor da array na posição 0, que no caso é BMW.
-    std::cout << carro_modelos[0][1] << std::endl; // irá imprimir o valor da array na posição 1, que no caso é Volvo.
-    std::cout << carro_modelos[0][2] << std::endl; // irá imprimir o valor da array na posição 2, que no caso é Ford.
-    std::cout << carro_modelos[1][0] << std::endl; // irá imprimir o valor da array na posição 0, que no caso é X5.
-    std::cout << carro_modelos[1][1] << std::endl; // irá imprimir o valor da array na posição 1, que no caso é XC90.
-    std::cout << carro_modelos[1][2] << std::endl; // irá imprimir o valor da array na posição 2, que no caso é Fiesta.
+    modelos[0] = "X5";
+    modelos[1] = "F40";
+    modelos[2] = "Aventador";
+    modelos[3] = "911";
 
+    std::cout << carros[0] << std::endl;
+    std::cout << carros[1] << std::endl;
+    std::cout << carros[2] << std::endl;
+    std::cout << carros[3] << std::endl;
 
     return 0;
 }
