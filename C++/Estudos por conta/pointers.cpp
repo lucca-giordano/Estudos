@@ -11,6 +11,7 @@ int main(){
 
     cout << "Name: " << name << endl;
     cout << "Name address: " << &name << endl;
+    
     cout << "Pointer name: " << pName << endl;
     cout << "Pointer name value: " << *pName << endl;
 
