@@ -656,3 +656,51 @@ int main(){
 
 ```
 
+# Arrays
+
+Arrays são usados para armazenar uma lista de valores. Existem duas formas de definir um array, onde a primeira, ela é declarada já com seus valores inseridos, e a segunda, ela é declarada sem valores, porém, com um tamanho definido.
+
+```cpp
+
+int array1[] = {1, 2, 3, 4, 5};
+
+int array2[5];
+array2[0] = 1;
+array2[1] = 2;
+array2[2] = 3;
+array2[3] = 4;
+array2[4] = 5;
+
+```
+
+Vale lembrar que, apesar do index dos elementos serem contados a partir do 0, o tamanho da array é definido com base na quantidade total de elementos, e não no index do último elemento.
+
+Outra informação importante sobre as arrays é que, assim como uma variável, uma array também recebe um tipo específico de dados, e só pode armazenar valores do mesmo tipo.
+
+## Acessando elementos
+
+Os elementos de um array são acessados com o nome da array e o index do elemento entre colchetes.
+
+```cpp
+
+int array[] = {1, 2, 3, 4, 5};
+
+std::cout << array[0] << std::endl;
+
+```
+
+## Tamanho de uma array
+
+O tamanho de uma array é obtido com a função `sizeof`. Esta função retorna o tamanho em bytes de um tipo de dado, ou de uma array.
+
+```cpp
+
+int array[] = {1, 2, 3, 4, 5};
+
+std::cout << sizeof(array) << std::endl;
+std::cout << sizeof(int) << std::endl;
+std::cout << sizeof(array) / sizeof(int) << std::endl;
+
+```
+
+
