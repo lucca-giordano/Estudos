@@ -27,6 +27,31 @@ Aqui estão todas as minhas anotações sobre C++, desde o mais básico até o m
         - [Valor Nulo](#valor-nulo)
     - [Variáveis](#variáveis)
 - [Constantes](#constantes)
+- [Namespaces](#namespace)
+- [Type alias](#type-alias)
+- [Operadores Aritméticos](#operadores-aritméticos)
+    - [Adição](#adição)
+    - [Subtração](#subtração)
+    - [Multiplicação](#multiplicação)
+    - [Divisão](#divisão)
+    - [Módulo](#módulo)
+    - [Incremento](#incremento)
+- [Input de Dados](#input-de-dados)
+- [Operadores condicionais](#operadores-condicionais)
+    - [if, else if, else](#if-else-if-else)
+    - [switch](#switch)
+    - [Operador ternário](#operador-ternário)
+    - [Operadores de Comparação](#operadores-de-comparação)
+    - [Operadores Lógicos](#operadores-lógicos)
+- [Loops](#loops)
+    - [while](#while)
+    - [do while](#do-while)
+    - [for](#for)
+    - [break](#break)
+    - [continue](#continue)
+    - [Nested loops](#nested-loops)
+    - [goto](#goto)
+
 
 # Iniciando um projeto
 
@@ -219,3 +244,409 @@ int main(){
 
 **Pode-se notar o uso do '`_t`' no final do type alias definido. Por convenção, quando um alias para um tipo de dado é definido, usa-se '`_t`' ao final, para demonstrar sua origem.**
 
+# Operadores aritméticos
+
+Os operadores aritméticos são usados para realizar operações aritméticas (adição, subtração, multiplicação, divisão, etc.) em variáveis ou constantes. O C++ suporta 6 operadores aritméticos:
+
+- Adição (+)
+- Subtração (-)
+- Multiplicação (*)
+- Divisão (/)
+- Módulo (%)
+- Incremento (++)
+
+## Adição (+)
+
+O operador de adição é usado para adicionar dois valores.
+
+```cpp
+
+int x = 5;
+int y = 10;
+int z = x + y; // z = 15
+
+```
+
+## Subtração (-)
+
+O operador de subtração é usado para subtrair dois valores.
+
+```cpp
+
+int x = 5;
+int y = 10;
+int z = x - y; // z = -5
+
+```
+
+## Multiplicação (*)
+
+O operador de multiplicação é usado para multiplicar dois valores.
+
+```cpp
+
+int x = 5;
+int y = 10;
+int z = x * y; // z = 50
+
+```
+
+## Divisão (/)
+
+O operador de divisão é usado para dividir dois valores.
+
+```cpp
+
+int x = 10
+int y = 5;
+int z = x / y; // z = 2
+
+```
+
+## Módulo (%)
+
+O operador de módulo é usado para obter o resto da divisão de dois valores.
+
+```cpp
+
+int x = 10;
+int y = 3;
+int z = x % y; // z = 1
+
+```
+
+## Incremento (++)
+
+O operador de incremento é usado para incrementar um valor em 1.
+
+```cpp
+
+int x = 5;
+x++; // x = 6
+
+```
+
+# Funções matemáticas (cmath)
+
+As funções matemáticas são usadas para realizar operações matemáticas (raiz quadrada, exponenciação, etc.). O C++ possui uma biblioteca padrão chamada cmath, que contém funções matemáticas. Algumas delas são:
+
+- `sqrt(x)` - Retorna a raiz quadrada de x
+- `pow(x, y)` - Retorna x elevado a y
+- `abs(x)` - Retorna o valor absoluto de x
+- `ceil(x)` - Retorna o menor inteiro maior ou igual a x
+- `floor(x)` - Retorna o maior inteiro menor ou igual a x
+- `round(x)` - Retorna o valor de x arredondado para o inteiro mais próximo
+- `max(x, y)` - Retorna o maior valor entre x e y
+- `min(x, y)` - Retorna o menor valor entre x e y
+
+Claro, estas não são todas as funções matemáticas que o C++ possui, mas são as mais comuns. Além disso, você pode criar suas próprias funções matemáticas.
+
+```cpp
+
+#include <iostream>
+#include <cmath>
+
+int main(){
+    std::cout << sqrt(25) << std::endl; // 5
+    std::cout << pow(2, 3) << std::endl; // 8
+    std::cout << abs(-5) << std::endl; // 5
+    std::cout << ceil(5.5) << std::endl; // 6
+    std::cout << floor(5.5) << std::endl; // 5
+    std::cout << round(5.5) << std::endl; // 6
+    std::cout << max(5, 10) << std::endl; // 10
+    std::cout << min(5, 10) << std::endl; // 5
+    return 0;
+}
+
+```
+
+# Input de dados
+
+O input de dados é usado para receber dados do usuário. Para receber dados do usuário, você deve usar a função `std::cin`.
+
+Porém, esta função tem algumas limitações, como por exemplo, ela não consegue receber espaços em branco. Para contornar este problema, você deve usar a função `std::getline`.
+
+Lembrando que, caso no seu código você use a função `std::getline` depois de usar a função `std::cin`, você deve usar a função `std::ws` para limpar o buffer de entrada.
+
+```cpp
+
+#include <iostream>
+
+int main(){
+    int x;
+    std::cin >> x;
+    std::cout << x << std::endl;
+
+    std::string y;
+    std::getline(std::cin >> std::ws, y);
+    std::cout << y << std::endl;
+    return 0;
+}
+
+```
+
+# Operadores condicionais
+
+## if, else if e else
+
+O if, else if e else são usados para executar um bloco de código caso uma condição seja verdadeira. O if, else if e else são definidos com as palavras-chave `if`, `else if` e `else`.
+
+```cpp
+
+int x = 5;
+if(x == 5){
+    std::cout << "x é igual a 5" << std::endl;
+}else if(x == 10){
+    std::cout << "x é igual a 10" << std::endl;
+}else{
+    std::cout << "x não é igual a 5 nem a 10" << std::endl;
+}
+
+```
+
+## switch
+
+O switch é usado para executar um bloco de código caso uma condição seja verdadeira. O switch é definido com a palavra-chave `switch`.
+
+```cpp
+
+int x = 5;
+
+switch(x){
+    case 5:
+        std::cout << "x é igual a 5" << std::endl;
+        break;
+    case 10:
+        std::cout << "x é igual a 10" << std::endl;
+        break;
+    default:
+        std::cout << "x não é igual a 5 nem a 10" << std::endl;
+        break;
+}
+
+```
+
+## Operação ternária
+
+A operação ternária é usada para executar um bloco de código caso uma condição seja verdadeira. A operação ternária é definida com a sintaxe `condição ? caso_verdade : caso_falso`.
+
+```cpp
+
+int x = 5;
+
+std::cout << (x == 5 ? "x é igual a 5" : "x não é igual a 5") << std::endl;
+
+```
+
+## Operadores de comparação
+
+Os operadores de comparação são usados para comparar dois valores. Os operadores de comparação são:
+
+- `==` - Igual
+- `!=` - Diferente
+- `>` - Maior que
+- `>=` - Maior ou igual a
+- `<` - Menor que
+- `<=` - Menor ou igual a
+
+## Operadores lógicos
+
+Os operadores lógicos são usados para combinar duas ou mais condições. Os operadores lógicos são:
+
+- `&&` - E
+- `||` - Ou
+- `!` - Não
+
+Aqui estão alguns exemplos de operadores lógicos e de comparação:
+
+```cpp
+
+int x = 5;
+
+if(x > 0 && x < 10){
+    std::cout << "x é maior que 0 e menor que 10" << std::endl;
+}
+
+if(x == 5 || x == 10){
+    std::cout << "x é igual a 5 ou a 10" << std::endl;
+}
+
+if(!(x == 5)){
+    std::cout << "x não é igual a 5" << std::endl;
+}
+
+```
+
+# Loops
+
+## while
+
+O while é usado para executar um bloco de código enquanto uma condição for verdadeira. O while é definido com a palavra-chave `while`.
+
+```cpp
+
+int x = 0;
+
+while(x < 10){
+    std::cout << x << std::endl;
+    x++;
+}
+
+```
+
+## do while
+
+O do while é usado para executar um bloco de código enquanto uma condição for verdadeira, a diferença principal é que a ação é executada no mínimo uma vez antes de verificar a condição. O do while é definido com a palavra-chave `do`.
+
+```cpp
+
+int x = 0;
+
+do{
+    std::cout << x << std::endl;
+    x++;
+}while(x < 10);
+
+```
+
+## for
+
+O for é usado para executar um bloco de código uma determinada quantidade de vezes. O for é definido com a palavra-chave `for`.
+
+```cpp
+
+for(int x = 0; x < 10; x++){
+    std::cout << x << std::endl;
+}
+
+```
+
+Os três exemplos de loops acima irão imprimir os números de 0 a 9.
+
+## break
+
+O break é usado para parar um loop. O break é definido com a palavra-chave `break`.
+
+```cpp
+
+for(int x = 0; x < 10; x++){
+    if(x == 5){
+        break;
+    }
+    std::cout << x << std::endl;
+}
+
+```
+
+## continue
+
+O continue é usado para pular uma iteração de um loop. O continue é definido com a palavra-chave `continue`.
+
+```cpp
+
+for(int x = 0; x < 10; x++){
+    if(x == 5){
+        continue;
+    }
+    std::cout << x << std::endl;
+}
+
+```
+
+## Nested loops
+
+Nested loops são loops dentro de loops. Nested loops são usados para executar um bloco de código uma determinada quantidade de vezes, mas com uma condição diferente.
+
+```cpp
+
+for(int x = 0; x < 10; x++){
+    for(int y = 0; y < 10; y++){
+        std::cout << x << " " << y << std::endl;
+    }
+}
+
+```
+
+## goto
+
+goto é usado para pular para um ponto do código. goto é definido com a palavra-chave `goto`.
+
+```cpp
+
+int x = 0;
+
+loop:
+    std::cout << x << std::endl;
+    x++;
+    if(x < 10){
+        goto loop;
+    }
+
+```
+
+# Funções
+
+## Definindo uma função
+
+Uma função é um bloco de código que pode ser executado várias vezes. Uma função é definida com a palavra-chave `void` ou com um tipo de retorno e seu nome.
+
+```cpp
+
+void printHelloWorld(){
+    std::cout << "Hello World" << std::endl;
+}
+
+```
+
+É importante lembrar que, seu código é lido de cima para baixo, e c++ executa tudo que está dentro da função main. Ou seja, normalmente, as funções são definidas abaixo da função main, e logo acima da mesma é 
+
+## Chamando uma função
+
+Uma função é chamada com seu nome e parênteses.
+
+```cpp
+
+void printHelloWorld(){
+    std::cout << "Hello World" << std::endl;
+}
+
+int main(){
+    printHelloWorld();
+    return 0;
+}
+
+```
+
+## Parâmetros
+
+Parâmetros são valores que são passados para uma função. Parâmetros são definidos entre parênteses após o nome da função.
+
+```cpp
+
+void printNumber(int x){
+    std::cout << x << std::endl;
+}
+
+int main(){
+    printNumber(5);
+    return 0;
+}
+
+```
+
+## Retornando um valor
+
+Uma função pode retornar um valor. Um valor é retornado com a palavra-chave `return`.
+
+```cpp
+
+int add(int x, int y){
+    return x + y;
+}
+
+int main(){
+    std::cout << add(5, 10) << std::endl;
+    return 0;
+}
+
+```
