@@ -3,7 +3,7 @@
 
  Aqui estão todas minhas anotações em python, desde o mais basico até o mais complexo
 
-![python](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png)
+![python](https://banner2.cleanpng.com/20180506/ile/kisspng-python-programming-language-computer-programming-5aefaba25ef4a4.302516281525656482389.jpg)
 
 ---
 ---
