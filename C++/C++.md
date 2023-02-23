@@ -683,21 +683,6 @@ std::cout << sizeof(array) / sizeof(int) << std::endl;
 
 ```
 
-## Iterando por uma array
-
-É possível iterar de duas formas por uma array, a primeira, é usando um loop tradicional, a segunda, é usando um loop especializado para arrays, o _for each_, que apesar de mais simples, é mais limitado. Pela praticidade, iremos ver apenas o `for each`
-
-```cpp
-
-std::string alunos[] = {"João", "Maria", "José"};
-for(std::string aluno : alunos){
-    std::cout << aluno << std::endl;
-}
-
-```
-
-Dessa forma, a variável `aluno` irá receber o valor de cada elemento da array `alunos`, e o bloco de código será executado para cada elemento.
-
 ## Passando uma array para uma função
 
 Uma array pode ser passada para uma função como parâmetro.
