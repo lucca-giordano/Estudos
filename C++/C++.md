@@ -703,3 +703,28 @@ int main(){
 }
 
 ```
+
+## Arrays multidimensionais
+
+Arrays multidimensionais são arrays que possuem mais de uma dimensão. Arrays multidimensionais são definidas com mais de um par de colchetes.
+
+```cpp
+
+std::string carros[][3] = {{"Detomasso", "Ferrari", "Lamborghini"},
+                           {"Ford", "Chevrolet", "Dodge"},
+                           {"Bugatti", "Koenigsegg", "Pagani"}};
+
+std::cout << carros[0][0] << std::endl;
+std::cout << carros[0][1] << std::endl;
+std::cout << carros[0][2] << std::endl;
+
+std::cout << carros[1][0] << std::endl;
+std::cout << carros[1][1] << std::endl;
+std::cout << carros[1][2] << std::endl;
+
+std::cout << carros[2][0] << std::endl;
+std::cout << carros[2][1] << std::endl;
+std::cout << carros[2][2] << std::endl;
+
+```
+
