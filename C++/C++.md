@@ -679,11 +679,9 @@ Outra informação importante sobre as arrays é que, assim como uma variável, 
 Os elementos de um array são acessados com o nome da array e o index do elemento entre colchetes.
 
 ```cpp
-
 int array[] = {1, 2, 3, 4, 5};
 
 std::cout << array[0] << std::endl;
-
 ```
 
 ## Tamanho de uma array
@@ -860,14 +858,25 @@ std::cout << *pNome << std::endl;
 O código acima irá imprimir:
 
 ```
-
 João
 0x7ffeeb2b9a10
 0x7ffeeb2b9a10
 João
-
 ```
 
 Ou seja, o valor de `pNome` é o mesmo que o endereço de memória de `nome`. O operador `*` também pode ser usado para acessar o valor contido no endereço de memória guardado em um ponteiro.
 
 **Lembrando que essa sequência de letras e números irá variar, este é só um exemplo**
+
+## Ponteiros e arrays
+
+Quando falamos de arrays, o tratamento quando vamos usar ponteiros acaba sendo um pouco diferente. 
+Vamos usar um exemplo para entender melhor.
+
+```cpp
+std::string carros[5] = {"Ferrari", "Lamborghini", "Pagani", "Koenigsegg", "Bugatti"};
+```
+
+A array "`carros`" em si, ja é um endereço de memória, ou seja, se nós declararmos um ponteiro para essa array da maneira convencional, iremos obter um erro.
+
+```cpp
