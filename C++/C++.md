@@ -19,6 +19,9 @@ Aqui estão todas as minhas anotações sobre C++, desde o mais básico até o m
 - [Loops](#loops)
 - [Funções](#funções)
 - [Arrays](#arrays)
+- [Endereços de Memória](#endereços-de-memória)
+- [Ponteiros](#ponteiros)
+
 
 
 # Iniciando um projeto
@@ -880,3 +883,39 @@ std::string carros[5] = {"Ferrari", "Lamborghini", "Pagani", "Koenigsegg", "Buga
 A array "`carros`" em si, ja é um endereço de memória, ou seja, se nós declararmos um ponteiro para essa array da maneira convencional, iremos obter um erro.
 
 ```cpp
+std::string *pCarros = &carros;
+```
+
+O código acima irá gerar um erro, pois o operador `&` não pode ser usado em arrays. Para resolver esse problema, podemos usar o operador `&` em cada elemento da array, e guardar o endereço de memória de cada elemento em um ponteiro.
+
+```cpp
+std::string *pCarros = carros;
+```
+
+Ou seja, o ponteiro `pCarros` irá guardar o endereço de memória do primeiro elemento da array `carros`. Dessa forma, podemos acessar os elementos da array com o operador `*`.
+
+```cpp
+std::cout << *pCarros << std::endl;
+```
+
+O código acima irá imprimir o primeiro elemento da array `carros`.
+
+Porém, você também pode tratar cada index de maneira individual, e por cada elemento não ser considerado uma array própria, você pode usar o operador `&` normalmente, e acessar o endereço de memória de cada elemento.
+
+```cpp
+std::string *pCarros1 = &carros[0];
+std::string *pCarros2 = &carros[1];
+std::string *pCarros3 = &carros[2];
+
+std::cout << *pCarros1 << std::endl;
+std::cout << *pCarros2 << std::endl;
+std::cout << *pCarros3 << std::endl;
+```
+
+O código acima irá imprimir:
+
+```cpp
+Ferrari
+Lamborghini
+Pagani
+```
