@@ -6,6 +6,8 @@ Aqui estão todas as minhas anotações sobre Java, desde o básico até o avan�
 
 ---
 
+teste
+
 # Sumário
 
 - [O que é Java?](#o-que-é-java)
