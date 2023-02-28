@@ -11,6 +11,8 @@
  * char: 16 bits - caracteres
  * boolean: 1 bit - true ou false
  * 
+ * Em java, as srings são objetos, e não variáveis, por isso não entram nessa lista
+ * 
  */
 
 public class variaveis {
@@ -26,6 +28,8 @@ public class variaveis {
         char c = 'a';
         boolean bo = true;
 
+        String nome = "João";
+
         // Imprimindo as variáveis
         System.out.println("byte: " + b);
         System.out.println("short: " + s);
@@ -35,6 +39,7 @@ public class variaveis {
         System.out.println("double: " + d);
         System.out.println("char: " + c);
         System.out.println("boolean: " + bo);
+        System.out.println("String: " + nome);
         
     }
 }
