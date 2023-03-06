@@ -267,6 +267,28 @@ public class NomeDaClasse {
 }
 ```
 
+### Funções estáticas e abstratas
+
+Em Java, existem duas funções especiais: `static` e `abstract`.
+
+#### static
+
+A função `static` é uma função que pode ser acessada sem a necessidade de criar um objeto. Para criar uma função `static`, basta usar a seguinte sintaxe:
+
+```java
+public static tipo metodo() {
+    // bloco de código
+}
+```
+
+#### abstract
+
+A função `abstract` é uma função que não possui corpo. Para criar uma função `abstract`, basta usar a seguinte sintaxe:
+
+```java
+public abstract tipo metodo();
+```
+
 ## Tipos de Classes
 
 Em Java, existem três tipos de classes: `public`, `default` e `private`.
@@ -321,28 +343,6 @@ Dessa forma, podemos acessar os atributos e métodos do objeto. Por exemplo:
 ```java
 objeto.nome = "João";
 objeto.metodo();
-```
-
-# Funções estáticas e abstratas
-
-Em Java, existem duas funções especiais: `static` e `abstract`.
-
-## static
-
-A função `static` é uma função que pode ser acessada sem a necessidade de criar um objeto. Para criar uma função `static`, basta usar a seguinte sintaxe:
-
-```java
-public static tipo metodo() {
-    // bloco de código
-}
-```
-
-## abstract
-
-A função `abstract` é uma função que não possui corpo. Para criar uma função `abstract`, basta usar a seguinte sintaxe:
-
-```java
-public abstract tipo metodo();
 ```
 
 # Interfaces
