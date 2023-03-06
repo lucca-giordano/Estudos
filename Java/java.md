@@ -323,3 +323,47 @@ objeto.nome = "João";
 objeto.metodo();
 ```
 
+# Funções estáticas e abstratas
+
+Em Java, existem duas funções especiais: `static` e `abstract`.
+
+## static
+
+A função `static` é uma função que pode ser acessada sem a necessidade de criar um objeto. Para criar uma função `static`, basta usar a seguinte sintaxe:
+
+```java
+public static tipo metodo() {
+    // bloco de código
+}
+```
+
+## abstract
+
+A função `abstract` é uma função que não possui corpo. Para criar uma função `abstract`, basta usar a seguinte sintaxe:
+
+```java
+public abstract tipo metodo();
+```
+
+# Interfaces
+
+Em Java, uma interface é basicamente uma biblioteca de métodos não definidos, que se tornam necessários quando implementada. Para criar uma interface, basta usar a seguinte sintaxe:
+
+```java
+public interface NomeDaInterface {
+    public abstract tipo metodo();
+}
+```
+
+## Implementando uma interface
+
+Para implementar uma interface, basta usar a seguinte sintaxe:
+
+```java
+public class NomeDaClasse implements NomeDaInterface {
+    
+    public tipo metodo() {
+        // bloco de código
+    }
+}
+```
