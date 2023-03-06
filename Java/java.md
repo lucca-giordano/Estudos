@@ -225,6 +225,8 @@ public class NomeDaClasse {
 }
 ```
 
+As classes são basicamente os arquivos do nosso projeto. Cada arquivo representa um objeto, e cada objeto possui atributos e métodos.
+
 ## Atributos
 
 Os atributos são as características de um objeto. Para criar um atributo, basta usar a seguinte sintaxe:
@@ -245,11 +247,13 @@ Os métodos são as ações de um objeto. Para criar um método, basta usar a se
 public class NomeDaClasse {
     // atributos
     // métodos
-    public tipo nome() {
+    public tipo metodo() {
         // bloco de código
     }
 }
 ```
+
+Em outras linguagens, os métodos são chamados de funções, é basicamente um bloco de código que executa uma ação e retorna um valor, dessa forma você pode executar o mesmo código várias vezes sem ter que escrever o mesmo código mais de uma vez.
 
 # Objetos
 
@@ -258,3 +262,11 @@ Um objeto é uma instância de uma classe. Para criar um objeto, basta usar a se
 ```java
 NomeDaClasse objeto = new NomeDaClasse();
 ```
+
+Dessa forma, podemos acessar os atributos e métodos do objeto. Por exemplo:
+
+```java
+objeto.nome = "João";
+objeto.metodo();
+```
+
