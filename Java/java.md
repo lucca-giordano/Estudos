@@ -267,6 +267,45 @@ public class NomeDaClasse {
 }
 ```
 
+## Tipos de Classes
+
+Em Java, existem três tipos de classes: `public`, `default` e `private`.
+
+### public
+
+A classe `public` é uma classe que pode ser acessada por qualquer outro arquivo do projeto. Para criar uma classe `public`, basta usar a seguinte sintaxe:
+
+```java
+public class NomeDaClasse {
+    // atributos
+    // métodos
+}
+```
+
+### default
+
+A classe `default` é uma classe que pode ser acessada apenas por arquivos do mesmo pacote. Para criar uma classe `default`, basta usar a seguinte sintaxe:
+
+```java
+class NomeDaClasse {
+    // atributos
+    // métodos
+}
+```
+
+### private
+
+A classe `private` é uma classe que não pode ser acessada por nenhum outro arquivo do projeto. Para criar uma classe `private`, basta usar a seguinte sintaxe:
+
+```java
+private class NomeDaClasse {
+    // atributos
+    // métodos
+}
+```
+
+**Lembrando que esses três tipos de classes também podem ser aplicados aos métodos e aos atributos**
+
 Assim, você pode usar o valor passado como parâmetro dentro do método, processa-lo e retornar algum valor com base em outro pre-existente no seu código.
 
 # Objetos
