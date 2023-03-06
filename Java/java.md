@@ -255,6 +255,20 @@ public class NomeDaClasse {
 
 Em outras linguagens, os métodos são chamados de funções, é basicamente um bloco de código que executa uma ação e retorna um valor, dessa forma você pode executar o mesmo código várias vezes sem ter que escrever o mesmo código mais de uma vez.
 
+Ao criar um método, você pode passar parâmetros para ele. Por exemplo:
+
+```java
+public class NomeDaClasse {
+    // atributos
+    // métodos
+    public tipo metodo(tipo parametro) {
+        // bloco de código
+    }
+}
+```
+
+Assim, você pode usar o valor passado como parâmetro dentro do método, processa-lo e retornar algum valor com base em outro pre-existente no seu código.
+
 # Objetos
 
 Um objeto é uma instância de uma classe. Para criar um objeto, basta usar a seguinte sintaxe:
