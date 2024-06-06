@@ -1,4 +1,4 @@
-# Estudos NI
+# Estudos PO
 
 ![Java logo](https://www.stickersdevs.com.br/wp-content/uploads/2022/01/java-adesivo-sticker.png)
 
