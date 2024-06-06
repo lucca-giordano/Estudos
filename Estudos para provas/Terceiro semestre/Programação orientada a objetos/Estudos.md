@@ -270,8 +270,118 @@ array[3] = 4;
 array[4] = 5;
 ```
 
+Nesse exemplo, criamos um array de inteiros com 5 elementos e atribuímos valores a cada elemento. Os elementos do array são acessados por um índice, que começa em 0 e vai até o tamanho do array menos um.
+
+### Listas
+
+Listas são estruturas de dados que armazenam uma coleção de elementos acessados por posição. Elas podem ser implementadas de várias formas, como listas encadeadas, listas duplamente encadeadas e listas circulares.
+
+```java
+List<Integer> list = new ArrayList<>();
+list.add(1);
+list.add(2);
+list.add(3);
+list.add(4);
+list.add(5);
+```
+
+Nesse exemplo, criamos uma lista de inteiros com 5 elementos e adicionamos valores à lista. Os elementos da lista são acessados por posição, começando em 0 para o primeiro elemento.
 
 
+### ArrayList vs Collections
+
+O ArrayList é uma implementação da interface List em Java que armazena elementos em uma lista dinâmica de tamanho variável. Ele permite adicionar, remover e acessar elementos por índice. O Collections é uma classe utilitária em Java que fornece métodos estáticos para operações com coleções, como ordenação, inversão e busca.
+
+```java
+ArrayList<String> list = new ArrayList<>();
+list.add("A");
+list.add("B");
+list.add("C");
+
+System.out.println(list.get(1));
+Collections.sort(list);
+```
+
+### Filas
+
+Uma fila é uma estrutura de dados que segue o princípio FIFO (First In, First Out), onde o primeiro elemento inserido é o primeiro a ser removido. Ela suporta operações como enqueue (inserir um elemento), dequeue (remover um elemento) e peek (verificar o elemento da frente).
+
+```java
+Queue<Integer> queue = new LinkedList<>();
+queue.add(1);
+queue.add(2);
+queue.add(3);
+```
+
+Existem alguns métodos úteis para manipular filas em Java, como:
+
+- `add()`: Insere um elemento no final da fila.
+- `remove()`: Remove e retorna o elemento da frente da fila.    
+- `peek()`: Retorna o elemento da frente da fila sem removê-lo.
+- `isEmpty()`: Verifica se a fila está vazia.
+- `isFull()`: Verifica se a fila está cheia.
+- `size()`: Retorna o número de elementos na fila.
+- `clear()`: Remove todos os elementos da fila.
+
+### Pilha
+
+Uma pilha é uma estrutura de dados que segue o princípio LIFO (Last In, First Out), onde o último elemento inserido é o primeiro a ser removido. Ela suporta operações como push (inserir um elemento), pop (remover um elemento) e peek (verificar o elemento do topo).
+
+```java
+Stack<Integer> stack = new Stack<>();
+stack.push(1);
+stack.push(2);
+stack.push(3);
+```
+
+Existem alguns métodos úteis para manipular pilhas em Java, como:
+
+- `push()`: Insere um elemento no topo da pilha.
+- `pop()`: Remove e retorna o elemento do topo da pilha.
+- `peek()`: Retorna o elemento do topo da pilha sem removê-lo.
+- `isEmpty()`: Verifica se a pilha está vazia.
+- `isFull()`: Verifica se a pilha está cheia.
+
+### Arvore
+
+As árvores são uma estrutura de dados fundamental na ciência
+da computação, utilizadas para representar hierarquias e
+relações de parentesco entre elementos. Elas são compostas por
+nós conectados por arestas, formando uma estrutura hierárquica
+com um nó raiz no topo e subárvores conectadas a cada nó. Algumas de suas aplicações são: 
+
+- Árvores de Decisão em Aprendizado de Máquina: São usadas para
+modelar decisões e classificações em algoritmos de aprendizado de
+máquina, onde cada nó interno representa um teste em um
+atributo e cada folha representa uma classe ou resultado.
+
+- Sistema de Arquivos: Em sistemas operacionais, as árvores são
+usadas para representar a estrutura de diretórios e arquivos em um sistema de arquivos hierárquico. Cada diretório é um nó na árvore e os arquivos são folhas.
+
+Uma árvore é uma estrutura de dados hierárquica que consiste em nós conectados por arestas. Cada nó tem um pai e zero ou mais filhos. Existem vários tipos de árvores, como árvores binárias, árvores de busca binárias, árvores AVL, árvores B, árvores B+ e árvores de segmento.
+
+```java
+public class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    public TreeNode(int val) {
+        this.val = val;
+    }
+}
+
+TreeNode root = new TreeNode(1);
+TreeNode node1 = new TreeNode(2);
+TreeNode node2 = new TreeNode(3);
+
+root.left = node1;
+root.right = node2;
+```
+
+---
+
+## Algoritmos
 
 ### Análise de Algoritmos
 
@@ -439,74 +549,3 @@ public static int binarySearch(int[] array, int target) {
 - **Binary Search Tree**: Estrutura de dados que organiza os elementos em uma árvore binária de busca, onde cada nó tem no máximo dois filhos e o filho da esquerda é menor que o pai e o filho da direita é maior que o pai. Permite busca, inserção e remoção eficientes, com complexidade de tempo O(log n) em média.
 
 - **Busca em Grafos**: Algoritmos de busca em grafos, como busca em largura (BFS) e busca em profundidade (DFS), são usados para encontrar caminhos em grafos. Eles têm complexidade de tempo O(V + E), onde V é o número de vértices e E é o número de arestas.
-
-### ArrayList vs Collections
-
-O ArrayList é uma implementação da interface List em Java que armazena elementos em uma lista dinâmica de tamanho variável. Ele permite adicionar, remover e acessar elementos por índice. O Collections é uma classe utilitária em Java que fornece métodos estáticos para operações com coleções, como ordenação, inversão e busca.
-
-```java
-ArrayList<String> list = new ArrayList<>();
-list.add("A");
-list.add("B");
-list.add("C");
-
-System.out.println(list.get(1));
-Collections.sort(list);
-```
-
-### Pilha
-
-Uma pilha é uma estrutura de dados que segue o princípio LIFO (Last In, First Out), onde o último elemento inserido é o primeiro a ser removido. Ela suporta operações como push (inserir um elemento), pop (remover um elemento) e peek (verificar o elemento do topo).
-
-```java
-Stack<Integer> stack = new Stack<>();
-stack.push(1);
-stack.push(2);
-stack.push(3);
-```
-
-Existem alguns métodos úteis para manipular pilhas em Java, como:
-
-- `push()`: Insere um elemento no topo da pilha.
-- `pop()`: Remove e retorna o elemento do topo da pilha.
-- `peek()`: Retorna o elemento do topo da pilha sem removê-lo.
-- `isEmpty()`: Verifica se a pilha está vazia.
-- `isFull()`: Verifica se a pilha está cheia.
-
-### Arvore
-
-As árvores são uma estrutura de dados fundamental na ciência
-da computação, utilizadas para representar hierarquias e
-relações de parentesco entre elementos. Elas são compostas por
-nós conectados por arestas, formando uma estrutura hierárquica
-com um nó raiz no topo e subárvores conectadas a cada nó. Algumas de suas aplicações são: 
-
-- Árvores de Decisão em Aprendizado de Máquina: São usadas para
-modelar decisões e classificações em algoritmos de aprendizado de
-máquina, onde cada nó interno representa um teste em um
-atributo e cada folha representa uma classe ou resultado.
-
-- Sistema de Arquivos: Em sistemas operacionais, as árvores são
-usadas para representar a estrutura de diretórios e arquivos em um sistema de arquivos hierárquico. Cada diretório é um nó na árvore e os arquivos são folhas.
-
-Uma árvore é uma estrutura de dados hierárquica que consiste em nós conectados por arestas. Cada nó tem um pai e zero ou mais filhos. Existem vários tipos de árvores, como árvores binárias, árvores de busca binárias, árvores AVL, árvores B, árvores B+ e árvores de segmento.
-
-```java
-public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    public TreeNode(int val) {
-        this.val = val;
-    }
-}
-
-TreeNode root = new TreeNode(1);
-TreeNode node1 = new TreeNode(2);
-TreeNode node2 = new TreeNode(3);
-
-root.left = node1;
-root.right = node2;
-```
-
