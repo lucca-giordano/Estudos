@@ -1,9 +1,9 @@
 # Variables
-@baseUrl = http://localhost:3333
+@baseUrl = http://localhost:3333 
 
 # Health Check
 # @name healthCheck
-GET {{baseUrl}}/health
+GET {{baseUrl}}/health 
 
 ###
 
@@ -38,10 +38,9 @@ GET {{baseUrl}}/rooms/{{roomId}}/questions
 
 # Create Qustion
 # @name createQuestion
-POST {{baseUrl}}/rooms/{{roomId}}/questions
-Accept: application/json
+POST {{baseUrl}}/rooms/91428972-52aa-459d-89ee-7e4a9bae6b2e/questions
 Content-Type: application/json
 
 {
-    "question":"Qual o conceito de X dentro de Y?"
+    "question":"Qual a diferença de react e angular?"
 }

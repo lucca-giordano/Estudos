@@ -15,6 +15,13 @@
       "when": 1752167414034,
       "tag": "0001_worthless_luke_cage",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752283171739,
+      "tag": "0002_spooky_red_skull",
+      "breakpoints": true
     }
   ]
 }

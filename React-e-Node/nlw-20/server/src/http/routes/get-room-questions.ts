@@ -19,17 +19,17 @@ export const getRoomQuestions: FastifyPluginCallbackZod = (app) => {
 
       const result = await db
         .select({
-            id: schema.questions.id,
-            question: schema.questions.question,
-            answer: schema.questions.answer,
-            createdAt: schema.questions.createdAt
+          id: schema.questions.id,
+          question: schema.questions.question,
+          answer: schema.questions.answer,
+          createdAt: schema.questions.createdAt,
         })
         .from(schema.questions)
-        .leftJoin(schema.questions, eq(schema.questions.roomId, schema.rooms.id))
+
         .where(eq(schema.questions.roomId, roomId))
         .orderBy(schema.questions.createdAt);
 
-        return result
+      return result;
     }
   );
 };
